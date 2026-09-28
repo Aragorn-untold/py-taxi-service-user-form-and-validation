@@ -17,7 +17,7 @@ class DriverCreateForm(UserCreationForm):
 class DriverLicenseUpdateForm(forms.ModelForm):
     license_number = forms.CharField(validators=[validate_license_number])
 
-    class Meta(UserCreationForm.Meta):
+    class Meta(forms.ModelForm.Meta):
         model = get_user_model()
         fields = ("license_number",)
 
